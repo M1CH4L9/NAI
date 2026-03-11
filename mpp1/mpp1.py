@@ -1,3 +1,6 @@
+#Michał Berlak
+#s33975
+
 def wczytajDane(nazwaPliku):
 
     dane = []
