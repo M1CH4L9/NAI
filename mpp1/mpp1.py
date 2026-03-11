@@ -1,6 +1,3 @@
-#Michał Berlak
-#s33975
-
 def wczytajDane(nazwaPliku):
 
     dane = []
@@ -114,3 +111,4 @@ while True:
         print(f"\nWynik klasyfikacji k-NN: {wynikKlasyfikacji}")
     except ValueError:
         print("Błąd: Wprowadź poprawne liczby.")
+
