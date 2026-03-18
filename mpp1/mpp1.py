@@ -110,5 +110,7 @@ while True:
         wynikKlasyfikacji = klasyfikujKNN(nowyWektor, daneTreningowe, k)
         print(f"\nWynik klasyfikacji k-NN: {wynikKlasyfikacji}")
     except ValueError:
+        print(f"\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         print("Błąd: Wprowadź poprawne liczby.")
+        print(f"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n")
 
