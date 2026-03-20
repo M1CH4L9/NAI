@@ -114,3 +114,9 @@ while True:
         print("Błąd: Wprowadź poprawne liczby.")
         print(f"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n")
 
+
+
+# # Osobny, mały skrypt tylko pod zadanie z ćwiczeń (opcjonalnie do pokazania)
+# w1 = [float(x) for x in input("Podaj 1 wektor: ").split()]
+# w2 = [float(x) for x in input("Podaj 2 wektor: ").split()]
+# print("Odległość:", liczOdleglosc(w1, w2))
