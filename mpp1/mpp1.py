@@ -91,28 +91,32 @@ print(f"Dokładność klasyfikacji: {dokladnosc:.2f}%")
 print("----------------------------------\n")
 
 
+liczbaAtrybutow = len(daneTreningowe[0][0])
 
 while True:
     print("------------------------------------------")
-    print("Tryb ręczny (wpisz 'koniec' aby zakończyć)")
-    wprowadzonyTekst = input("\nPodaj wymiary kwiatu (oddzielone spacjami, np. 5.6 3.2 4.5 1.5): ")
+    nowyWektor = []
+    bladWprowadzania = False
 
-    if wprowadzonyTekst.lower() == 'koniec':
-        print("\nZakończono program.")
-        break
+    for i in range(liczbaAtrybutow):
+        wprowadzonyTekst = input(f"Bardzo proszę, podaj cechę {i+1}: ")
+        try:
+            nowyWektor.append(float(wprowadzonyTekst.replace(',', '.')))
+        except ValueError:
+            print(f"\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print("Błąd: Wprowadź poprawne liczby.")
+            print(f"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n")
+            bladWprowadzania = True
+            break
 
-    try:
-        elementyStr = wprowadzonyTekst.split()
-        nowyWektor = []
-        for x in elementyStr:
-            nowyWektor.append(float(x.replace(',', '.')))
-
+    if not bladWprowadzania:
         wynikKlasyfikacji = klasyfikujKNN(nowyWektor, daneTreningowe, k)
         print(f"\nWynik klasyfikacji k-NN: {wynikKlasyfikacji}")
-    except ValueError:
-        print(f"\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print("Błąd: Wprowadź poprawne liczby.")
-        print(f"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n")
+
+    decyzja = input("\nCzy szanowny osobnik ma życzenie zakończyć działanie tego programu (tak/nie): ")
+    if decyzja.strip().lower() in ['tak', 't']:
+        print("\nZakończono program.")
+        break
 
 
 
