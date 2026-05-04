@@ -170,3 +170,24 @@ def zadanie_entropia_z_klawiatury():
 if __name__ == "__main__":
     k_means()
     zadanie_entropia_z_klawiatury()
+
+
+#!!!
+#IF Z ZAPĘTLENIEM, JEŻELI TRZEBA
+#!!!
+
+# if __name__ == "__main__":
+#     while True:
+#         # Odpalamy główny algorytm
+#         k_means()
+        
+#         # Odpalamy zadanie z ćwiczeń
+#         zadanie_entropia_z_klawiatury()
+        
+#         print("\n" + "="*40)
+#         wybor = input("Czy chcesz uruchomić program ponownie? (wpisz 'nie' aby wyjść, lub cokolwiek innego aby kontynuować): ")
+        
+#         if wybor.strip().lower() == 'nie':
+#             print("Zamykanie programu...")
+#             break
+#         print("="*40 + "\n")
